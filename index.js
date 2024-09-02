@@ -29,7 +29,7 @@ let currentStep = 1;
                 // Display selected options on the fourth page
                 document.getElementById('displayName').innerText = document.getElementById('name').value;
                 document.getElementById('displayEmail').innerText = document.getElementById('email').value;
-                document.getElementById('displayAge').innerText = document.getElementById('age').value;
+              //
                 document.getElementById('displayGender').innerText = document.getElementById('gender').value;
             }
 
@@ -46,6 +46,8 @@ let currentStep = 1;
         currentStep--;
         updateStepCounter(currentStep);
     }
+
+
 
     document.getElementById('multiPageForm').addEventListener('submit', function(event) {
         alert('Form submitted successfully!');

@@ -52,41 +52,43 @@
             </div>
         
 
-            <div class="card">
-        <div class="page" id="page2">
-          <div id="page_1">
-            <h2>Page 2</h2>
-            <label for="email">Email:</label>
-            <select id="gender" name="gender" required>
+            
+        <div class="page" id="page2" required>
+          <div class="page active" id="page_1">
+            <h2>Select your plan</h2>
+            <p>You have the option of monthly or yearly billing.</p>
+            <label for="email">Plans:</label>
+            <select id="gender" name="gender">
               <option value="">Select</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
+              <option value="male">Arcade $9/mo</option>
+              <option value="female">Advanced $12/mo</option>
+              <option value="other">Pro$15/mo</option>
           </select><br>
+           
             </div>
-            <div id="page_2">
+            
+            <div class="page" id="page_2">
             <h2>Page 2</h2>
             <label for="email">Email:</label>
-            <select id="gender" name="gender" required>
+            <select id="gender" name="gender">
               <option value="">Select</option>
-              <option value="male">Male</option>
+              <option value="male">Arcade
+                $9/mo</option>
               <option value="female">Female</option>
               <option value="other">Other</option>
           </select><br>
+          </div>
           <div class="toggle-switch" id="toggleSwitch" onclick="togglePage()"></div>
             <div class="buttons">
             <button type="button" class="prev" onclick="prevPage(2)">Previous</button>
             <button type="button" class="next" onclick="nextPage(2)">Next</button>
             </div>
             </div>
-        </div>
-        </div>
         
 
         <div class="page" id="page3">
             <h2>Page 3</h2>
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required><br>
+           
             <label for="gender">Gender:</label>
             <select id="gender" name="gender" required>
                 <option value="">Select</option>
