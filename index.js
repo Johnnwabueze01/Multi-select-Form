@@ -51,3 +51,14 @@ let currentStep = 1;
         alert('Form submitted successfully!');
         event.preventDefault(); // Remove this line to actually submit the form
     });
+
+
+    function togglePage() {
+        const page1 = document.getElementById('page_1');
+        const page2 = document.getElementById('page_2');
+        const toggleSwitch = document.getElementById('toggleSwitch');
+
+        page1.classList.toggle('active');
+        page2.classList.toggle('active');
+        toggleSwitch.classList.toggle('active');
+    }
