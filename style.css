@@ -7,17 +7,19 @@ body {
             align-items: center;
             height: 100vh;
             background: linear-gradient(to right, #6a11cb, #2575fc);
-        }
+ }
 
-        .container {
-            display: flex;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 100%;
-            max-width: 600px;
-            height: 90%;
+.container {
+    display: flex;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(199, 136, 136, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    height: 80%;
+    margin-bottom: 50px;
+            
         }
 
         .step-counter {
@@ -25,6 +27,7 @@ body {
             color: white;
             padding: px;
             width: 150px;
+            height: 100%;
             flex-shrink: 0;
             display: flex;
             flex-direction: column;
@@ -165,18 +168,56 @@ body {
         .error {
             border-color: red;
         }
-       .card {
-            
-            border-radius: 10px;
+        .card-container {
+            display: flex;
+            gap: 20px;
+            width: 80px;
+          }
+          
+      
+          .card {
+            flex: 1;
             padding: 20px;
-            width: 100%;
-            max-width: 400px;
-            box-sizing: border-box;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
             text-align: center;
-            height: 100%;
-            border: none;
-        }
-        .toggle-switch {
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            align-items: center;
+            margin-bottom: 10px;
+            width: 100%;
+          }
+          .card img{
+            height: 30px;
+            margin: 0px 10px 0px 0px;
+          }
+          
+      
+      
+          .card.checked {
+            border-color: #007bff;
+            background-color: #e6f0ff;
+          }
+
+      
+          .card.selected {
+            border-color: #007bff;
+            background-color: #e6f0ff;
+          }
+      
+          .card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+          }
+      
+          .card p {
+            margin: 0;
+            font-size: 1rem;
+          }
+          .toggle-switch {
             position: relative;
             width: 60px;
             height: 30px;
@@ -185,6 +226,12 @@ body {
             cursor: pointer;
             margin: 20px auto;
         }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+          }
+      
 
         .toggle-switch::before {
             content: '';
@@ -205,31 +252,151 @@ body {
         .toggle-switch.active::before {
             transform: translateX(30px);
         }
-button.start{
-             background-color: #6a11cb;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            width: 100px;
+        .tog{
             display: flex;
             justify-content: center;
-            align-items: center;
-            margin: 0 20px;
+            gap: 20px;
+            background-color: rgba(37, 37, 207, 0.644);
+            width: 200px;
             height: 40px;
+            border-radius: 10px;
+            align-items: center;
             text-align: center;
-}
+            margin-left: 100px;
+            font-weight: 600;
+        }
+         
+        .page .container{
+            width: 100%;
+            max-width: 800px;
+            overflow: auto;
+            margin-top: 10px;
+            padding-bottom: 0px;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            
+          }
+      
+          .section.active {
+            display: block;
+          }
+          .switch-container {
+            display: flex;
+            margin: 10px 130px 0px 130px;
+            background-color:  rgba(37, 37, 207, 0.644);
+            width: 200px;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 90vw;
+          }
+          .toggle-switchs {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            margin-left: 10px;
+          }
+      
+          .toggle-switchs input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+          }
+          .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 30px;
+            
+          }
+      
+          .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+          }
+      
+          input:checked + .slider {
+            background-color: #007bff;
+          }
+      
+          input:checked + .slider:before {
+            transform: translateX(30px);
+          }
+          label.card{
+            display: flex;
+            text-align: left;
+            height: 20px;
+            width: 290px;
+            
+          }
+      
+          .card input[type="checkbox"] {
+            transform: scale(1.5);
+            cursor: pointer;
+            align-items: flex-start;
+            display: flex;
+          }
+      
+          .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            height: 120px;
+            
+          }
+          .tog2{
+            display: flex;
+            
+          }
+          .container .p4{
+            color: blue;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #d9dcdf;
+            width: 100%;
+          }
+          .container .p4 .f1{
+            display: inline;
+            justify-content: space-between;
+            margin-right: 300px;
+          }
+          .f1 strong p{
+            color: red;
+            font-size: 4000px;
+          }
+          .container span.dols{
+            color: red;
+            margin-left: 200px;
+          }
 
         @media (max-width: 600px) {
             .container {
                 flex-direction: column;
+                width: 90%;
             }
 
             .step-counter {
                 width: 100%;
                 padding: 10px;
+                height: 50px;
                 flex-direction: row;
                 justify-content: space-around;
+                background-image: url(assets/images/bg-sidebar-mobile.svg);
+                background-size: cover;
             }
 
             .step {
@@ -240,3 +407,9 @@ button.start{
                 padding: 15px;
             }
         }
+
+    footer{
+      display: flex;
+      margin-top: 600px;
+      text-align: center;
+    }

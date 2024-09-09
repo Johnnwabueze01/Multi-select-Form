@@ -1,3 +1,16 @@
+const cards = document.querySelectorAll('.card');
+const switchElement = document.getElementById('switch');
+const section1 = document.getElementById('section1');
+const section2 = document.getElementById('section2');
+
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        cards.forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+      });
+    });
+    
 let currentStep = 1;
 
     function updateStepCounter(step) {
@@ -25,9 +38,9 @@ let currentStep = 1;
         });
 
         if (valid) {
-            if (currentPage === 3) {
+            if (currentPage === 6) {
                 // Display selected options on the fourth page
-                document.getElementById('displayName').innerText = document.getElementById('name').value;
+                document.getElementById('displayName').innerText = document.getElementById('card1').value;
                 document.getElementById('displayEmail').innerText = document.getElementById('email').value;
               //
                 document.getElementById('displayGender').innerText = document.getElementById('gender').value;
@@ -64,3 +77,24 @@ let currentStep = 1;
         page2.classList.toggle('active');
         toggleSwitch.classList.toggle('active');
     }
+
+
+    
+
+    switchElement.addEventListener('change', () => {
+      if (switchElement.checked) {
+        section1.classList.remove('active');
+        section2.classList.add('active');
+      } else {
+        section1.classList.add('active');
+        section2.classList.remove('active');
+      }
+    });
+
+    cards.forEach(card => {
+      const checkbox = card.querySelector('input[type="checkbox"]');
+      card.addEventListener('click', () => {
+        checkbox.checked = !checkbox.checked;
+        card.classList.toggle('checked', checkbox.checked);
+      });
+    });

@@ -9,8 +9,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/My Logo.png">
   
   <title>Multi-step form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -45,7 +43,7 @@
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" placeholder="e.g. stephenking@lorem.com" required><br>
             <label for="number">Phone Number:</label>
-            <input type="number" id="number" name="number" placeholder="e.g. +1 234 567 890" required><br><br><br><br><br>
+            <input type="phonenumber" id="number" name="number" placeholder="e.g. +1 234 567 890" required><br><br><br><br><br>
             <div class="btn">
             <button type="button" class="next" onclick="nextPage(1)">Next Step</button>
             </div>
@@ -54,32 +52,55 @@
 
             
         <div class="page" id="page2" required>
+          <h2>Select your plan</h2>
+            <p>You have the option of monthly or yearly billing.</p>
           <div class="page active" id="page_1">
-            <h2>Select your plan</h2>
-            <p>You have the option of monthly billing.</p>
-            <label for="email">Monthly Plans:</label>
-            <select id="gender" name="gender">
-              <option value="">Select</option>
-              <option value="male">Arcade $9/mo</option>
-              <option value="female">Advanced $12/mo</option>
-              <option value="other">Pro$15/mo</option>
-          </select><br>
-           
+            <label for="M_plans">Monthly Plans:</label>
+          <div class="card-container">
+            <div class="card" id="card1">
+              <img src="assets/images/icon-arcade.svg" alt="Arcade_img">
+              <h3>Arcade</h3>
+              <p>$3/mo</p>
+              </div>
+              <div class="card" id="card2">
+                <img src="assets/images/icon-advanced.svg" alt="Advanced_img">
+                <h3>Advanced</h3>
+              <p>$6/mo</p>
+              </div>
+              <div class="card" id="card3">
+                <img src="assets/images/icon-pro.svg" alt="Pro_img">
+                <h3>Pro</h3>
+              <p>$9/mo</p>
+              </div>
+              </div>
             </div>
             
             <div class="page" id="page_2">
-            <h2>Select your plan</h2>
-              <p>You have the option of yearly billings</p>
-            <label for="email">Yearly Plan:</label>
-            <select id="gender" name="gender">
-              <option value="">Select</option>
-              <option value="male">Arcade $9/mo</option>
-              <option value="female">Advanced $12/mo</option>
-              <option value="other">Pro$15/mo/option>
-          </select><br>
+              <label for="Y_plans">Yearly Plans:</label>
+          <div class="card-container">
+            <div class="card" id="card1">
+              <img src="assets/images/icon-arcade.svg" alt="Arcade_img">
+              <h3>Arcade</h3>
+              <p>$36/yr</p>
+              </div>
+              <div class="card" id="card2">
+                <img src="assets/images/icon-advanced.svg" alt="Advanced_img">
+                <h3>Advanced</h3>
+              <p>$72/yr</p>
+              </div>
+              <div class="card" id="card3">
+                <img src="assets/images/icon-pro.svg" alt="Pro_img">
+                <h3>Pro</h3>
+              <p>$108/yr</p>
+              </div>
+              </div>
           </div>
+          <div class="tog">
+            <p>Monthly</p>
           <div class="toggle-switch" id="toggleSwitch" onclick="togglePage()"></div>
-            <div class="buttons">
+           <p>Yearly</p>
+        </div>
+          <div class="buttons">
             <button type="button" class="prev" onclick="prevPage(2)">Previous</button>
             <button type="button" class="next" onclick="nextPage(2)">Next</button>
             </div>
@@ -87,29 +108,84 @@
         
 
         <div class="page" id="page3">
-           <h2>Pick add-ons</h2>
-           <p> Add-ons help enhance your gaming experience.</p>
-           
-            <label for="gender">Adds:</label>
-            <select id="gender" name="gender" required>
-                <option value="">Select</option>
-                <option value="male">Online service Access to multiplayer games +$1/mo</option>
-                <option value="female">Larger storage Extra 1TB of cloud save +$2/mo</option>
-                <option value="other">Customizable Profile Custom theme on your profile +$2/mo</option>
-            </select><br>
+            <h2> Pick add-ons <p>Add-ons help enhance your gaming experience.</p></h2>
+            <div class="container">
+              <div id="section1" class="section active">
+                <h2>Monthly</h2>
+                <div class="checkbox-group">
+                  <label class="card" for="checkbox1-1">
+                    <input type="checkbox" id="checkbox1-1">
+                    <h3>Online service </h3>
+                    <p> Access to multiplayer games</p>
+                     <small> +$1/mo</small>
+                  </label>
+                  <label class="card" for="checkbox1-2">
+                    <input type="checkbox" id="checkbox1-2">
+                    <h3>Larger storage</h3>
+                    <p>Extra 1TB of cloud save</p>
+                     <small> +$2/mo</small>
+                  </label>
+                  <label class="card" for="checkbox1-3">
+                    <input type="checkbox" id="checkbox1-3">
+                    <h3>Customizable Profile</h3>
+                    <p> Custom theme on your profile</p>
+                     <small> +$2/mo</small>
+                  </label>
+                </div>
+              </div>
+          
+              <div id="section2" class="section">
+                <h2>Yearly</h2>
+                <div class="checkbox-group">
+                  <label class="card" for="checkbox2-1">
+                    <input type="checkbox" id="checkbox2-1">
+                    <h3>Online service </h3><br>
+                    <p> Access to multiplayer games</p><br>
+                     <small> +$1/mo</small>
+                  </label>
+                  <label class="card" for="checkbox2-2">
+                    <input type="checkbox" id="checkbox2-2">
+                    <h3>Larger storage</h3><br>
+                    <p>Extra 1TB of cloud save</p><br>
+                     <small> +$2/mo</small>
+                  </label>
+                  <label class="card" for="checkbox2-3">
+                    <input type="checkbox" id="checkbox2-3">
+                    <h3>Customizable Profile</h3><br>
+                    <p> Custom theme on your profile</p><br>
+                     <small> +$2/mo</small>
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="switch-container">
+              <p>Monthly</p>
+              <label class="toggle-switchs">
+                <input type="checkbox" id="switch">
+                <span class="slider"></span>
+              </label>
+              <p>Yearly</p>
+            </div>
             <div class="buttons">
-            <button type="button" class="prev" onclick="prevPage(3)">Previous</button>
-            <button type="button" class="next" onclick="nextPage(3)">Next</button>
-        </div>
-        </div>
+              <button type="button" class="prev" onclick="prevPage(3)">Previous</button>
+              <button type="button" class="next" onclick="nextPage(3)">Next</button>
+          </div>
+          </div>
 
         <div class="page" id="page4">
             <h2>Finishing up<p style="text-align: left;">Double-check everything looks OK before confirming.</p></h2>
-            
-            <p><strong>Name:</strong> <span id="displayName"></span></p>
-            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
-            <p><strong>Age:</strong> <span id="displayAge"></span></p>
-            <p><strong>Gender:</strong> <span id="displayGender"></span></p><br>
+            <div class="container">
+              <div class="p4">
+              <p class="f1"><strong>Arcade(Monthly)<p style="text-decoration: underline;color: rgb(44, 44, 230);cursor: pointer;margin-right: 250px;">change</p> </strong> <span class="dols" id="displayPlan">$9/mo</span></p>
+              
+              <p><small>Online Service </small> <span class="dols" id="displayPlan">$1/mo</span></p>
+              <p><small>Large storage </small> <span class="dols" id="displayPlan">$2/mo</span></p>
+            </div>
+            </div>
+            <div class="tot">
+              <p><small>Total(per month) </small> <span class="dols" id="displayPlan">$12/mo</span></p>
+            </div>
             <div class="buttons">
             <button type="button" class="prev" onclick="prevPage(4)">Previous</button>
             <button type="button" class="next" onclick="nextPage(4)">confirm</button>
@@ -123,16 +199,16 @@
               using our platform. If you ever need support, please feel free 
               to email us at johnnwabueze70@gmail.com.</p>
             <p style="font-weight: 500;">Your submission has been received.</p>
-           <button type="button" class="start" href="index.html">Go Back</button>
         </div>
     </form>
-</div><br><br>
- <!--<footer>
+</div> 
+<footer>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">John Nwabueze</a>.
   </div>
-  </footer>-->
+
+</footer> 
   <script src="index.js"></script>
 </body>
 </html>
