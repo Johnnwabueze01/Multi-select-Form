@@ -177,7 +177,7 @@ body {
       
           .card {
             flex: 1;
-            padding: 40px;
+            padding: 45px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: #fff;
@@ -288,10 +288,10 @@ body {
             display: flex;
             margin: 10px 130px 0px 130px;
             background-color:  rgba(37, 37, 207, 0.644);
-            width: 200px;
+            width: 160px;
             border-radius: 10px;
             font-weight: 800;
-            font-size: 90vw;
+            font-size: 90px;
           }
           .toggle-switchs {
             position: relative;
@@ -408,8 +408,4 @@ body {
             }
         }
 
-    footer{
-      display: flex;
-      margin-top: 600px;
-      text-align: center;
-    }
+    
